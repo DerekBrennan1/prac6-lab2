@@ -22,8 +22,8 @@ jobs:
       - name: Test azure login by getting details
         run: az account show
       - name: Change directory
-        run: echo "cd production"
+        run: az extension add --name ml
       - name: Run Ml comman
-        run: echo "az ml job create --file job.yaml --resource-group prac6-Derek  --workspace-name prac6-ws"
+        run: az ml job create --file job.yaml --resource-group prac6-Derek  --workspace-name prac6-ws
         
     
